@@ -1,0 +1,2 @@
+#!/bin/bash
+pom=1;while :;do for t in {25,5};do printf "\n(pom #%d) %s starting at %s" "$pom" `[ $t -eq 25 ] && echo "session" || echo "break"` `date +"%H:%M"`;for i in {0..9};do printf '\7';sleep 0.1;done;sleep $(($t*60));done;((pom++)); python3 incr_goal.py pomodoro 1; done
