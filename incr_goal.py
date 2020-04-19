@@ -5,7 +5,7 @@ from json import loads
 from urllib.parse import urlencode
 from urllib.request import urlopen
 
-config_path = os.path.join(os.path.expanduser('~'),'.beerc')
+config_path = os.path.join(os.path.expanduser('~'),'.config/beeminder/.pomrc')
 
 def auth_token():
     dict1 = {}

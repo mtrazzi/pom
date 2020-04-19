@@ -13,7 +13,7 @@ browser extensions for pomodoros are a distraction
 
 2) get your [auth_token](https://www.beeminder.com/api/v1/auth_token.json)
 
-3) create ~/.bmndrrc file:
+3) create ~/.config/beeminder/.pomrc  file:
 
 ```
     [account]
