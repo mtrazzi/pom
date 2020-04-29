@@ -17,7 +17,7 @@ def auth_token():
       dict1[option] = Config.get(section, option)
     return dict1['auth_token']
  
-comment = sys.argv[3] if len(sys.argv) >= 3 else ''
+comment = sys.argv[3] if len(sys.argv) >= 4 else ''
 
 post = {'auth_token': auth_token(), 'timestamp': round(time()), 'value': sys.argv[2], 'comment': comment}
 params = urlencode(post)
