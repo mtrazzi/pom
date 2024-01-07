@@ -1,2 +1,2 @@
 #!/bin/bash
-pom=1;while :;do for t in {25,5};do printf "(pom #%d) %s starting at %s --> " "$pom" `[ $t -eq 25 ] && echo "session" || echo "break"` `date +"%H:%M"`; if [ $t -eq 25 ]; then osascript -e 'display alert "pom starts"' &> /dev/null; else osascript -e 'display alert "pom break"' &> /dev/null; fi; sleep $(($t*1)); printf '\n'; done; ((pom++)); done
+pom=1;while :;do for t in {25,5};do printf "(pom #%d) %s starting at %s --> " "$pom" `[ $t -eq 25 ] && echo "session" || echo "break"` `date +"%H:%M"`; if [ $t -eq 25 ]; then osascript -e 'display alert "pom starts"' &> /dev/null; else osascript -e 'display alert "pom break"' &> /dev/null; fi; sleep $(($t*60)); printf '\n'; done; ((pom++)); done
